@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {Nav, Navbar, NavbarBrand, NavLink} from 'reactstrap';
-import Menu from './components/menu/Menu'
-import {employees} from './shared/employees';
+import MenuComponent from './components/menu/MenuComponent'
+import {dishes} from './shared/dishes';
 
 class App extends React.Component {
 
@@ -12,7 +12,7 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      employees
+      dishes
     }
   }
 
@@ -26,11 +26,11 @@ class App extends React.Component {
           </div>
         </Navbar><br/>
         <div className="container">
-          <h1 className="center" center>Facades React.js Test</h1>
+          <h1 className="center">Facades React.js Test</h1>
           <h3>A Facabe Website built during a Cousera React Frontend Course</h3>
         </div>
         <br/>
-        <Menu employees={this.state.employees}/>
+        <MenuComponent dishes={this.state.dishes}/>
       </div>
     );
   }
